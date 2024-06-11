@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Smoker Detection</title>
+    <script>
+        function play_sound() {
+            fetch('/play_sound', { method: 'POST' });
+        }
+    </script>
+</head>
+<body>
+    <h1>Smoker Detection CCTV</h1>
+    <img src="{{ url_for('video') }}" width="1920" height="1080">
+    <br>
+    <button onclick="play_sound()">Warning</button>
+</body>
+</html>
